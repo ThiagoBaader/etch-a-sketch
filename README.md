@@ -22,8 +22,8 @@ Um quadro de desenho interativo para exercitar habilidades de manipulação do D
 
 🧠 O que eu aprendi
 
-    • Manipulação do DOM com JavaScript.  
-  • Uso de funções, condicionais e eventos.  
+   • Manipulação do DOM com JavaScript.  
+   • Uso de funções, condicionais e eventos.  
    • Uso de CSS Grid e Flexbox.
 
 📚 Créditos
