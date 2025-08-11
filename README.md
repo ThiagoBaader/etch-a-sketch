@@ -8,11 +8,14 @@ Um quadro de desenho no navegador inspirado no brinquedo Etch-a-Sketch.
 
    • Um quadro de desenho interativo para exercitar habilidades de manipulação do DOM. O usuário pode desenhar passando o mouse sobre uma grade de quadrados, que mudam de cor com a interação.
 
+
+
 🔧 Tecnologias Utilizadas
 
    • HTML5 / CSS
 
    • JavaScript
+
 
 
 ✨ Funcionalidades
@@ -24,6 +27,7 @@ Um quadro de desenho no navegador inspirado no brinquedo Etch-a-Sketch.
    • Botão para limpar o desenho
 
 
+
 🧠 O que eu aprendi
 
    • Manipulação do DOM com JavaScript.
@@ -31,6 +35,7 @@ Um quadro de desenho no navegador inspirado no brinquedo Etch-a-Sketch.
    • Uso de funções, condicionais e eventos.
 
    • Uso de CSS Grid e Flexbox
+
 
 
 📚 Créditos
