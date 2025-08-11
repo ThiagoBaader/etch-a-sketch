@@ -14,6 +14,7 @@ Um quadro de desenho no navegador inspirado no brinquedo Etch-a-Sketch.
 
    • JavaScript
 
+
 ✨ Funcionalidades
 
    • Ajuste do tamanho do quadro
@@ -22,6 +23,7 @@ Um quadro de desenho no navegador inspirado no brinquedo Etch-a-Sketch.
 
    • Botão para limpar o desenho
 
+
 🧠 O que eu aprendi
 
    • Manipulação do DOM com JavaScript.
@@ -29,6 +31,7 @@ Um quadro de desenho no navegador inspirado no brinquedo Etch-a-Sketch.
    • Uso de funções, condicionais e eventos.
 
    • Uso de CSS Grid e Flexbox
+
 
 📚 Créditos
 
