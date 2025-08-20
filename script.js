@@ -34,14 +34,33 @@ function createGrid(size) {
     addHoverEffect();
 }
 
-function addHoverEffect() {
-   let div = document.querySelectorAll("#container div");
+function randomColor() {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    return `rgb(${r}, ${g}, ${b})`;
+}
 
-    div.forEach(div => {
+function addHoverEffect() {
+    let color = randomColor();
+    let divs = document.querySelectorAll("#container div");
+
+    divs.forEach(div => {
         div.addEventListener("mouseenter", function() {
-            div.style.backgroundColor = "black";
+            div.style.backgroundColor = color;
         });
     });
+}
+
+const button = document.querySelector("#resetButton");
+button.addEventListener("click", reset);
+
+function reset() {
+    let divs = document.querySelectorAll("#container div");
+
+    divs.forEach(div => {
+        div.style.backgroundColor = "";
+    })
 }
 
 gridSize();
