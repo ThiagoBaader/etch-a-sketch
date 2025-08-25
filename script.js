@@ -1,20 +1,19 @@
+let color = randomColor();
+
 function gridSize() {
     let size = 0;
-    const button = document.querySelector("#gridSizeButton")
+    const gridSizeButton = document.querySelector("#gridSizeButton")
 
-    button.addEventListener("click", function() {
+    gridSizeButton.addEventListener("click", function() {
         const input = prompt("Select the grid size:");
         size = parseInt(input);
 
         if (isNaN(size) || size <= 0 || size > 100) {
             alert("Please enter a number between 1 and 100.")
-        } else{
-            const div = document.querySelectorAll("#container div");
-        div.forEach(div => {
-            div.remove();
-        });
-
-        createGrid(size);
+        } else {
+            const divs = document.querySelectorAll("#container div");
+            divs.forEach(div => div.remove());
+            createGrid(size);
         }
     });
 }
@@ -42,26 +41,42 @@ function randomColor() {
 }
 
 function addHoverEffect() {
-    let color = randomColor();
+    let isMouseDown = false;
     let divs = document.querySelectorAll("#container div");
 
+    document.addEventListener("mousedown", () => isMouseDown = true);
+    document.addEventListener("mouseup", () => isMouseDown = false);
+
     divs.forEach(div => {
-        div.addEventListener("mouseenter", function() {
+        div.addEventListener("mouseover", function() {
+            if (isMouseDown) {
+                div.style.backgroundColor = color;
+            }
+        });
+
+        div.addEventListener("mousedown", function() {
             div.style.backgroundColor = color;
         });
+
+        div.addEventListener("dragstart", (e) => e.preventDefault());
     });
 }
 
-const button = document.querySelector("#resetButton");
-button.addEventListener("click", reset);
+const resetButton = document.querySelector("#resetButton");
+resetButton.addEventListener("click", reset);
 
 function reset() {
     let divs = document.querySelectorAll("#container div");
 
     divs.forEach(div => {
         div.style.backgroundColor = "";
-    })
-}
+    });
+};
+
+const changeColorButton = document.querySelector("#changeColorButton");
+changeColorButton.addEventListener("click", () => {
+    color = randomColor();
+});
 
 gridSize();
 createGrid(16);

@@ -13,4 +13,6 @@
 
 #container div {
     outline: 1px solid black;
+    cursor: crosshair;
+    user-select: none;
 }
